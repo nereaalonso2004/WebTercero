@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: rgb(255, 216, 252);
+}
+
+
+h1, h2 {
+    font-family: "Pinyon Script";
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+img, iframe {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.galeria > figure {
+    width: 25%;
+    border: greenyellow 5px solid;
+}
