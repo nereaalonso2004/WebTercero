@@ -39,8 +39,33 @@ img, iframe {
 }
 
 .galeria > * {
-    width: 25%;
+    width: 30%;
     border: greenyellow 5px solid;
+}
+
+.galeria > figure {
+    position: relative;
+}
+
+.galeria > figure > figcaption {
+    background-color: rgb(48, 48, 48);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.galeria > figure > figcaption:hover {
+    opacity: 100%;
 }
 
 header, section {
@@ -53,6 +78,7 @@ header, section {
 
 section {
     min-height: 100vh;
+    padding: 3em 30%;
 }
 
 header {
@@ -67,6 +93,17 @@ header {
 header > h1 {
     font-size: 5em;
     text-align: right;
+}
+
+section > h2 {
+    font-size: 4rem;
+    color:blue;
+    border: red 3px solid;
+}
+
+section > h2, 
+section > p  {
+    padding-left: 5rem;
 }
 
 /* Maquetación del menú */
@@ -88,4 +125,43 @@ header > h1 {
     height: 3em;
     display: flex;
     align-items: center;
+}
+
+#uni > p {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        padding: 3em 10%;
+    }
+
+    .galeria > figure {
+        width: 45%
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    section > h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .galeria > figure,
+    .galeria > iframe {
+        width: 100%;
+    }
+}
+
+.galeria > figure > figcaption {
+    opacity: 1;
+    position: static;
+    height: auto;
+    background-color: transparent;
+    color: black;
+    font-size: 1em;
+    font-weight: normal;
+    justify-content: start;
 }
